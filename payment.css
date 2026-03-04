@@ -1,0 +1,178 @@
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+  font-family:'Inter',sans-serif;
+}
+
+body{
+  background:#0f172a;
+  color:white;
+  min-height:100vh;
+}
+
+/* HEADER */
+.header{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  padding:20px 2%;
+  background:rgba(255,255,255,0.05);
+  backdrop-filter:blur(10px);
+}
+
+.logo-wrapper{
+  display:flex;
+  align-items:center;
+  gap:8px;
+}
+
+.brand-icon{
+  width:65px;
+  border-radius:8px;
+}
+
+.logo{
+  font-weight:800;
+  font-size:22px;
+}
+
+.logo-x{
+  color:#21daff;
+}
+
+.tagline{
+  font-size:12px;
+  opacity:1;
+}
+
+
+
+.secure-badge{
+  font-size:18px;
+  color:#00d4ff;
+}
+
+/* CONTAINER */
+.payment-container{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:50px;
+  padding:60px 8%;
+}
+
+/* ORDER SUMMARY */
+.order-summary h2{
+  margin-bottom:20px;
+}
+
+.summary-box{
+  background:rgba(255,255,255,0.05);
+  padding:25px;
+  border-radius:15px;
+  box-shadow:0 0 25px rgba(0,212,255,0.15);
+}
+
+.summary-box h3{
+  margin:10px 0 20px;
+}
+
+.price-row{
+  display:flex;
+  justify-content:space-between;
+  font-weight:700;
+  font-size:18px;
+  color:#00d4ff;
+}
+
+/* PAYMENT BOX */
+.payment-box{
+  background:rgba(255,255,255,0.05);
+  padding:30px;
+  border-radius:20px;
+  box-shadow:0 0 30px rgba(0,212,255,0.15);
+}
+
+.payment-box h2{
+  margin-bottom:25px;
+}
+
+/* INPUTS */
+.input-group{
+  margin-bottom:20px;
+}
+
+.input-group label{
+  display:block;
+  margin-bottom:8px;
+  font-size:14px;
+  opacity:0.8;
+}
+
+.input-group input{
+  width:100%;
+  padding:12px;
+  border-radius:8px;
+  border:none;
+  background:#1e293b;
+  color:white;
+  outline:none;
+  transition:0.3s;
+}
+
+.input-group input:focus{
+  box-shadow:0 0 10px #00d4ff;
+}
+
+/* BUTTON */
+.pay-btn{
+  width:100%;
+  padding:14px;
+  border:none;
+  border-radius:10px;
+  background:linear-gradient(90deg,#00d4ff,#3b82f6);
+  color:white;
+  font-weight:700;
+  cursor:pointer;
+  transition:0.3s;
+}
+
+.pay-btn:hover{
+  transform:scale(1.05);
+  box-shadow:0 0 20px #00d4ff;
+}
+
+/* TRUST INFO */
+.trust-info{
+  margin-top:20px;
+  font-size:14px;
+  opacity:0.8;
+}
+
+.trust-info p{
+  margin:5px 0;
+}
+
+/* FOOTER */
+footer{
+  text-align:center;
+  padding:30px;
+  opacity:0.6;
+}
+
+/* ANIMATION */
+.fade-in{
+  animation:fadeIn 0.8s ease forwards;
+}
+
+@keyframes fadeIn{
+  from{opacity:0; transform:translateY(20px);}
+  to{opacity:1; transform:translateY(0);}
+}
+
+/* RESPONSIVE */
+@media(max-width:900px){
+  .payment-container{
+    grid-template-columns:1fr;
+  }
+}

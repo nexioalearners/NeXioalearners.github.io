@@ -1,0 +1,278 @@
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+  font-family:'Inter',sans-serif;
+}
+
+body{
+  background:#0f172a;
+  color:#fff;
+  overflow-x:hidden;
+}
+
+/* HEADER */
+.header{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  padding:20px 2%;
+  background:rgba(255,255,255,0.05);
+  backdrop-filter:blur(10px);
+}
+
+.logo-wrapper{
+  display:flex;
+  align-items:center;
+  gap:12px;
+}
+
+.brand-icon{
+  width:60px;
+  border-radius:2px;
+}
+
+.logo{
+  font-weight:800;
+  font-size:24px;
+}
+
+.logo-x{
+  color:#00d4ff;
+  font-size: 28px;
+}
+
+.tagline{
+  font-size:16px;
+  opacity:2;
+}
+
+nav a{
+  margin-left:20px;
+  text-decoration:none;
+  color:#fff;
+  font-weight:500;
+  transition:0.3s;
+  font-size: 26px;
+}
+
+nav a:hover,
+nav a.active{
+  color:#00d4ff;
+}
+
+/* HERO */
+.courses-hero{
+  text-align:center;
+  padding:80px 20px 40px;
+}
+
+.courses-hero h1{
+  font-size:38px;
+  font-weight:800;
+  background:linear-gradient(90deg,#00d4ff,#3b82f6);
+  -webkit-background-clip:text;
+  background-clip:text;
+  color:transparent;
+}
+
+.courses-hero p{
+  margin-top:15px;
+  opacity:0.8;
+}
+
+.course-count{
+  text-align:center;
+  margin:20px;
+  opacity:1;
+}
+
+/* FILTERS */
+.filters{
+  display:flex;
+  justify-content:center;
+  gap:25px;
+  flex-wrap:wrap;
+  padding: 25px;
+}
+
+.filters input,
+.filters select{
+  padding:10px 15px;
+  border-radius:8px;
+  border:none;
+  outline:none;
+  background:#1e293b;
+  color:white;
+}
+
+/* COURSES */
+.courses{
+  padding:40px 8%;
+}
+
+.course-grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+  gap:30px;
+}
+
+/* CARD */
+.course-card{
+  background:rgba(255,255,255,0.05);
+  border-radius:18px;
+  padding:25px;
+  backdrop-filter:blur(12px);
+  transition:0.4s ease;
+  position:relative;
+  box-shadow:0 0 20px rgba(0,212,255,0.15);
+}
+
+.course-card:hover{
+  transform:translateY(-8px) scale(1.03);
+  box-shadow:0 0 40px rgba(0,212,255,0.35);
+}
+
+.course-card h3{
+  margin-bottom:10px;
+}
+
+.course-card p{
+  opacity:0.8;
+  font-size:14px;
+  margin-bottom:15px;
+}
+
+/* PRICE BADGE */
+.price{
+  font-weight:700;
+  font-size:18px;
+  color:#00d4ff;
+}
+
+/* CERTIFICATE TAG */
+.badge{
+  position:absolute;
+  top:15px;
+  right:15px;
+  background:#00d4ff;
+  color:#000;
+  font-size:12px;
+  padding:4px 8px;
+  border-radius:6px;
+  font-weight:600;
+}
+
+/* BUY BUTTON */
+.buy-btn{
+  margin-top:15px;
+  padding:10px;
+  width:100%;
+  border:none;
+  border-radius:8px;
+  cursor:pointer;
+  font-weight:600;
+  background:linear-gradient(90deg,#00d4ff,#3b82f6);
+  color:white;
+  transition:0.3s;
+}
+
+.buy-btn:hover{
+  box-shadow:0 0 20px #00d4ff;
+  transform:scale(1.05);
+}
+
+/* FOOTER */
+footer{
+  text-align:center;
+  padding:30px;
+  opacity:0.6;
+}
+
+/* RESPONSIVE */
+@media(max-width:768px){
+  .courses-hero h1{
+    font-size:28px;
+  }
+}
+/* === Futuristic Background Image === */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Inter', sans-serif;
+  background: 
+    linear-gradient(rgba(15, 23, 42, 0.85), rgba(15, 23, 42, 0.9)),
+    url("images/bg_image.jpg");
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  color: #fff;
+}
+
+/* Course Image Container */
+.course-img {
+  position: relative;   /* IMPORTANT */
+  width: 100%;
+  height: 170px;
+  overflow: hidden;
+  border-radius: 14px;
+  margin-bottom: 15px;
+}
+
+
+.course-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.4s ease;
+}
+
+/* Hover Zoom Effect */
+.course-card:hover .course-img img {
+  transform: scale(1.08);
+}
+.course-img::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to top, rgba(0,0,0,0.5), transparent);
+  pointer-events: none;  /* VERY IMPORTANT */
+}
+
+/* PRICE WRAPPER */
+.price-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+/* OLD PRICE (CUT RED) */
+.old-price {
+  color: #ff4d4d;
+  text-decoration: line-through;
+  font-size: 14px;
+  font-weight: 600;
+  opacity: 0.8;
+}
+
+/* NEW PRICE (REAL PRICE) */
+.new-price {
+  color: #00d4ff;
+  font-size: 20px;
+  font-weight: 800;
+  text-shadow: 0 0 10px rgba(0,212,255,0.6);
+}
+.discount-badge {
+  position: absolute;
+  top: 15px;
+  left: 15px;
+  background: #ff4d4d;
+  color: #fff;
+  padding: 5px 10px;
+  font-size: 12px;
+  font-weight: 700;
+  border-radius: 6px;
+  box-shadow: 0 0 10px rgba(255,0,0,0.4);
+}

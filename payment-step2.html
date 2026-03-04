@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  
+<meta charset="UTF-8">
+<title>Submit UTR | NeXioa</title>
+<link rel="icon" type="jpg" href="nexioa final logo2.jpg">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="utr.css">
+<script src="https://checkout.razorpay.com/v1/checkout.js"></script>
+
+</head>
+<body>
+
+<header class="header">
+  <div class="logo-wrapper">
+    <img src="nexioa final logo2.jpg" class="brand-icon">
+    <div class="logo-text-block">
+      <div class="logo">
+        <span class="logo-text1">Ne</span><span class="logo-x">X</span><span class="logo-text">ioa</span>
+      </div>
+      <span class="tagline">Powering Future Skills</span>
+    </div>
+  </div>
+
+  <div class="secure-badge">🔒 100% Secure Checkout</div>
+</header>
+
+
+<section class="utr-container fade-in">
+
+  <h2>Complete Your Payment</h2>
+
+  <div class="amount-box">
+    <p>You Need To Pay</p>
+    <h1>₹<span id="payAmount">0</span></h1>
+    <p id="couponApplied" class="coupon-text"></p>
+  </div>
+
+</section>
+
+<footer>
+  © 2026 NeXioa Learners. All rights reserved.
+</footer>
+
+<script>
+
+// ✅ Get dynamic amount from localStorage
+const amount = localStorage.getItem("NeXioa_payable_amount");
+
+// If no amount found
+if (!amount) {
+  alert("Invalid Payment Session");
+  window.location.href = "courses.html";
+}
+
+// Show amount on page
+document.getElementById("payAmount").innerText = amount;
+
+// Auto open payment when page loads
+window.onload = function() {
+
+var options = {
+    "key": "rzp_live_SN9YZ9zTrlqVQm",
+    "amount": parseInt(amount) * 100, // convert ₹ to paise
+    "currency": "INR",
+    "name": "NeXioa",
+    "description": "Course Enrollment",
+    "image": "nexioa final logo2.jpg",
+
+    "prefill": {
+        "name": localStorage.getItem("userName") || "",
+        "email": localStorage.getItem("userEmail") || "",
+        "contact": localStorage.getItem("userPhone") || ""
+    },
+
+    "handler": function (response){
+        window.location.href = "https://forms.gle/gcHBKHLmukhZCCoe9";
+    },
+
+    "theme": {
+        "color": "#6C63FF"
+    }
+};
+
+var rzp1 = new Razorpay(options);
+rzp1.open();
+
+};
+
+</script>
+
+
+
+</body>
+</html>

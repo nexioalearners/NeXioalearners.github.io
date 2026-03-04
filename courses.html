@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Courses|NeXioa Learners</title>
+<link rel="icon" type="jpg" href="nexioa final logo2.jpg">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="courses.css">
+</head>
+
+<body>
+
+  <!-- Scrolling Banner at the top -->
+<div class="scrolling-banner">
+  <div class="scrolling-text">
+    🎉 New Year Offer: 20% OFF! &nbsp; | &nbsp;
+    🌼 Holi Special: 10% OFF! &nbsp; | &nbsp;
+    🛍️ Summer Sale: 5% OFF! &nbsp; | &nbsp;
+    ✨ More exciting offers valid till 20 May 2026!
+    🎉 New Year Offer: 20% OFF! &nbsp; | &nbsp;
+    🌼 Holi Special: 10% OFF! &nbsp; | &nbsp;
+    🛍️ Summer Sale: 5% OFF! &nbsp; | &nbsp;
+    ✨ More exciting offers valid till 20 May 2026!
+  </div>
+</div>
+
+<style>
+/* Banner container */
+.scrolling-banner {
+  width: 100%;
+  overflow: hidden;
+  background-color: #ffeb3b; /* Yellow background */
+  color: #000;
+  font-weight: bold;
+  padding: 10px 0;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+}
+
+/* Scrolling text animation */
+.scrolling-text {
+  display: inline-block;
+  white-space: nowrap;
+  padding-left: 100%;
+  animation: scroll-left 20s linear infinite;
+}
+
+@keyframes scroll-left {
+  0% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+</style>
+
+<header class="header">
+  <div class="logo-wrapper">
+    <img src="nexioa final logo2.jpg" class="brand-icon">
+    <div class="logo-text-block">
+      <div class="logo">
+        <span class="logo-text1">Ne</span><span class="logo-x">X</span><span class="logo-text">ioa</span>
+      </div>
+      <span class="tagline">Powering Future Skills</span>
+    </div>
+  </div>
+
+  <nav>
+    <a href="index.html">🏠︎  Home</a>
+    
+  </nav>
+</header>
+
+<section class="courses-hero">
+  <h1>Explore Future-Ready Courses</h1>
+  <p>Industry-ready skills. Verified Certificates. Lifetime Access.</p>
+</section>
+
+<p class="course-count">
+  Showing <span id="courseCount"></span> Courses
+</p>
+
+<section class="filters">
+  <input type="text" id="searchInput" placeholder="Search courses">
+  <select id="categoryFilter">
+    <option value="">Category</option>
+    <option value="Marketing">Marketing</option>
+    <option value="Tech">Tech</option>
+    <option value="Design">Design</option>
+  </select>
+  <select id="sortFilter">
+    <option value="">Sort</option>
+    <option value="low">Price: Low → High</option>
+    <option value="high">Price: High → Low</option>
+  </select>
+</section>
+
+<section class="courses">
+  <div class="course-grid" id="courseGrid"></div>
+</section>
+
+<footer>
+  <p>© 2026 NeXioa Learners. All rights reserved.</p>
+</footer>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r152/three.min.js"></script>
+<script src="courses.js"></script>
+
+</body>
+</html>

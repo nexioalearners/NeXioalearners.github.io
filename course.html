@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Course Details | NeXioa</title>
+<link rel="icon" type="jpg" href="nexioa final logo2.jpg">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="course.css">
+</head>
+
+<body>
+  
+  <!-- Scrolling Banner at the top -->
+<div class="scrolling-banner">
+  <div class="scrolling-text">
+    🎉 New Year Offer: 20% OFF! &nbsp; | &nbsp;
+    🌼 Holi Special: 10% OFF! &nbsp; | &nbsp;
+    🛍️ Summer Sale: 5% OFF! &nbsp; | &nbsp;
+    ✨ More exciting offers valid till 20 May 2026!
+    🎉 New Year Offer: 20% OFF! &nbsp; | &nbsp;
+    🌼 Holi Special: 10% OFF! &nbsp; | &nbsp;
+    🛍️ Summer Sale: 5% OFF! &nbsp; | &nbsp;
+    ✨ More exciting offers valid till 20 May 2026!
+  </div>
+</div>
+
+<style>
+/* Banner container */
+.scrolling-banner {
+  width: 100%;
+  overflow: hidden;
+  background-color: #ffeb3b; /* Yellow background */
+  color: #000;
+  font-weight: bold;
+  padding: 10px 0;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+}
+
+/* Scrolling text animation */
+.scrolling-text {
+  display: inline-block;
+  white-space: nowrap;
+  padding-left: 100%;
+  animation: scroll-left 20s linear infinite;
+}
+
+@keyframes scroll-left {
+  0% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+</style>
+
+<header class="header">
+  <div class="logo-wrapper">
+    <img src="nexioa final logo2.jpg" class="brand-icon">
+    <div class="logo-text-block">
+      <div class="logo">
+        <span class="logo-text1">Ne</span><span class="logo-x">X</span><span class="logo-text">ioa</span>
+      </div>
+      <span class="tagline">Powering Future Skills</span>
+    </div>
+  </div>
+
+  <nav>
+    <a href="index.html">🏠︎  Home</a>
+    <a href="courses.html">🕮  Courses</a>
+  </nav>
+</header>
+
+<section class="course-detail">
+
+  <div class="course-image">
+    <img id="image">
+    <div class="course-badge" id="badge"></div>
+  </div>
+
+  <div class="course-info">
+    <h1 id="title"></h1>
+    <p id="desc"></p>
+
+    <div class="meta">
+      <span><b>Level:</b> <span id="level"></span></span>
+      <span><b>Parts:</b> <span id="parts"></span></span>
+      <span class="rating">★ <span id="ratingValue"></span></span>
+    </div>
+
+    <p class="price" id="price"></p>
+
+    <h3>Certificates Included</h3>
+    <div class="certificate-box">
+      <img id="Participation">
+      <img id="completition">
+    </div>
+
+    <h3>Course Syllabus</h3>
+    <div class="accordion">
+      <button class="accordion-btn">Introduction</button>
+      <div class="panel"><p> This course provides a comprehensive journey from basics to mastery. 
+      You'll understand fundamental principles, industry tools, and practical techniques to become proficient.</p></div>
+
+      <button class="accordion-btn">Module 1</button>
+      <div class="panel"><p>In this section, you'll explore core concepts, including best practices, step-by-step workflows, 
+      and strategies used by professionals in the field. Each concept is reinforced with practical examples.</p></div>
+
+      <button class="accordion-btn">Module 2</button>
+      <div class="panel"><p> Apply your knowledge through hands-on exercises, real-world projects, and case studies. This module ensures you can implement 
+      your skills confidently in personal projects, freelance tasks, or professional environments.</p></div>
+    </div>
+
+    <button class="enroll-btn" onclick="apply()">Enroll Now</button>
+  </div>
+
+</section>
+
+<footer>
+  <p>© 2026 NeXioa Learners</p>
+</footer>
+
+<script src="course.js"></script>
+
+</body>
+</html>
