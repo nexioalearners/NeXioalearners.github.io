@@ -1,0 +1,163 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Inter', sans-serif;
+}
+
+body {
+  height: 100vh;
+  background: #0f172a;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #ffffff;
+}
+
+/* Animated background glow */
+.background-glow {
+  position: absolute;
+  width: 600px;
+  height: 600px;
+  background: radial-gradient(circle, #00d4ff55, transparent 70%);
+  animation: floatGlow 6s ease-in-out infinite alternate;
+  z-index: 0;
+}
+
+@keyframes floatGlow {
+  0% { transform: translate(-50px, -50px); }
+  100% { transform: translate(50px, 50px); }
+}
+
+.main-container {
+  position: relative;
+  z-index: 1;
+}
+
+/* Glass card */
+.glass-card {
+  backdrop-filter: blur(18px);
+  background: rgba(255, 255, 255, 0.05);
+  padding: 60px;
+  border-radius: 20px;
+  text-align: center;
+  width: 420px;
+  box-shadow: 0 0 40px rgba(0, 212, 255, 0.2);
+  transition: 0.4s ease;
+}
+
+.glass-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 0 60px rgba(0, 212, 255, 0.4);
+}
+
+/* Brand text */
+.brand {
+  font-weight: 800;
+  color: #198fc5;
+}
+
+/* Special X styling */
+.brand-x {
+   color: #f0733a;
+  font-weight: 800;
+  text-shadow:
+    0 0 4px #f0733a,
+    0 0 8px #f0733a,
+    0 0 16px #f0733a
+}
+
+
+
+/* Buttons */
+.button-group {
+  margin-top: 30px;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.btn {
+  padding: 14px;
+  border-radius: 10px;
+  border: none;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: 600;
+  transition: 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.primary {
+  background: linear-gradient(90deg, #00d4ff, #3b82f6);
+  color: white;
+}
+
+.secondary {
+  background: transparent;
+  border: 2px solid #00d4ff;
+  color: #00d4ff;
+}
+
+.btn:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 20px #00d4ff;
+}
+
+/* Fade animation */
+.fade-in {
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeUp 1s forwards;
+}
+
+.delay {
+  animation-delay: 0.5s;
+}
+
+.delay2 {
+  animation-delay: 1s;
+}
+
+@keyframes fadeUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Responsive */
+@media (max-width: 500px) {
+  .glass-card {
+    width: 90%;
+    padding: 40px 25px;
+  }
+}
+
+
+/* ===============================
+   MULTIPLE FLOATING FUTURE BUBBLES
+================================ */
+
+.floating-bubble {
+  position: absolute;
+  border-radius: 100%;
+  border: 2px solid rgba(255, 255, 255, 0.801);
+  backdrop-filter: blur(8px);
+  animation: floatMove linear infinite;
+  opacity: 0.7;
+}
+
+@keyframes floatMove {
+  0% {
+    transform: translateY(0px) translateX(0px) scale(1);
+  }
+  50% {
+    transform: translateY(-30px) translateX(20px) scale(1.1);
+  }
+  100% {
+    transform: translateY(-60px) translateX(-20px) scale(1);
+  }
+}

@@ -1,0 +1,185 @@
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+  font-family:'Inter',sans-serif;
+}
+
+body{
+  background:#0f172a;
+  color:white;
+  min-height:100vh;
+}
+
+/* HEADER */
+.header{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  padding:20px 2%;
+  background:rgba(255,255,255,0.05);
+  backdrop-filter:blur(10px);
+}
+
+.logo-wrapper{
+  display:flex;
+  align-items:center;
+  gap:8px;
+}
+
+.brand-icon{
+  width:65px;
+  border-radius:8px;
+}
+
+.logo{
+  font-weight:800;
+  font-size:22px;
+}
+
+.logo-x{
+  color:#21daff;
+}
+
+.tagline{
+  font-size:12px;
+  opacity:1;
+}
+
+
+
+.secure-badge{
+  font-size:18px;
+  color:#00d4ff;
+}
+
+
+/* CONTAINER */
+.utr-container{
+  max-width:600px;
+  margin:60px auto;
+  padding:40px;
+  background:rgba(255,255,255,0.05);
+  border-radius:20px;
+  box-shadow:0 0 30px rgba(0,212,255,0.15);
+  text-align:center;
+}
+
+/* TEXT */
+.utr-container h2{
+  margin-bottom:15px;
+}
+
+.info-note{
+  opacity:0.8;
+  margin-bottom:30px;
+  font-size:14px;
+}
+
+/* AMOUNT BOX */
+.amount-box{
+  background:#1e293b;
+  padding:20px;
+  border-radius:15px;
+  margin-bottom:30px;
+}
+
+.amount-box h1{
+  color:#00d4ff;
+  font-size:32px;
+}
+
+.coupon-text{
+  margin-top:5px;
+  color:#4ade80;
+  font-size:14px;
+}
+
+/* QR */
+.qr-box img{
+  width:200px;
+  border-radius:12px;
+  margin-bottom:10px;
+  box-shadow:0 0 20px rgba(0,212,255,0.3);
+}
+
+.qr-box p{
+  font-size:14px;
+  opacity:0.8;
+  margin-bottom:30px;
+}
+
+/* FORM */
+.utr-form{
+  margin-top:10px;
+}
+
+.utr-form label{
+  display:block;
+  margin-bottom:8px;
+}
+
+.utr-form input{
+  width:100%;
+  padding:12px;
+  border-radius:8px;
+  border:none;
+  background:#1e293b;
+  color:white;
+  outline:none;
+  margin-bottom:15px;
+  transition:0.3s;
+}
+
+.utr-form input:focus{
+  box-shadow:0 0 10px #00d4ff;
+}
+
+.utr-form button{
+  width:100%;
+  padding:14px;
+  border:none;
+  border-radius:10px;
+  background:linear-gradient(90deg,#00d4ff,#3b82f6);
+  color:white;
+  font-weight:700;
+  cursor:pointer;
+  transition:0.3s;
+}
+
+.utr-form button:hover{
+  transform:scale(1.05);
+  box-shadow:0 0 20px #00d4ff;
+}
+
+/* TRUST LINE */
+.trust-line{
+  margin-top:20px;
+  font-size:13px;
+  opacity:0.7;
+}
+
+/* FOOTER */
+footer{
+  text-align:center;
+  padding:30px;
+  opacity:0.6;
+}
+
+/* ANIMATION */
+.fade-in{
+  animation:fadeIn 0.8s ease forwards;
+}
+
+@keyframes fadeIn{
+  from{opacity:0; transform:translateY(20px);}
+  to{opacity:1; transform:translateY(0);}
+}
+
+/* RESPONSIVE */
+@media(max-width:600px){
+  .utr-container{
+    margin:30px 15px;
+    padding:25px;
+  }
+}
